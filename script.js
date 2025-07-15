@@ -1,21 +1,22 @@
-// Confirm script is working
-console.log("✅ Portfolio script loaded");
+console.log("✅ Portfolio loaded");
 
-// ===== Resume Download =====
+// Resume Download
 document.getElementById("download-resume").addEventListener("click", () => {
   window.open("Resume_JohnMosesEnje.pdf", "_blank");
 });
 
-// ===== Smooth Scroll Navigation =====
+// Smooth Scroll
 document.querySelectorAll('nav a[href^="#"]').forEach(link => {
-  link.addEventListener("click", function (e) {
+  link.addEventListener("click", e => {
     e.preventDefault();
-    const target = document.querySelector(this.getAttribute("href"));
-    if (target) {
-      target.scrollIntoView({ behavior: "smooth" });
-    }
+    const target = document.querySelector(link.getAttribute("href"));
+    if (target) target.scrollIntoView({ behavior: "smooth" });
   });
 });
 
-// ===== Future Add-ons Placeholder (Modals, Dark Mode, etc.) =====
-// Add more interactivity here if needed
+// Dark Mode Toggle
+const toggleBtn = document.getElementById("toggle-theme");
+toggleBtn.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+  toggleBtn.textContent = document.body.classList.contains("dark-mode") ? "☀️ Light Mode" : "🌙 Dark Mode";
+});
