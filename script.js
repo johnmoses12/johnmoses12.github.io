@@ -1,7 +1,7 @@
-// Confirm script is loaded
+// Confirm script is working
 console.log("✅ Portfolio script loaded");
 
-// ===== Resume Download Button =====
+// ===== Resume Download =====
 document.getElementById("download-resume").addEventListener("click", () => {
   window.open("Resume_JohnMosesEnje.pdf", "_blank");
 });
@@ -16,3 +16,6 @@ document.querySelectorAll('nav a[href^="#"]').forEach(link => {
     }
   });
 });
+
+// ===== Future Add-ons Placeholder (Modals, Dark Mode, etc.) =====
+// Add more interactivity here if needed
