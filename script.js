@@ -1,13 +1,17 @@
-// Portfolio Ready
-console.log("✅ John Moses Portfolio loaded successfully!");
+console.log("Portfolio loaded ✅");
 
-// Smooth scroll navigation
+// Resume download logic
+document.getElementById("download-resume").addEventListener("click", () => {
+  window.open("Resume_JohnMosesEnje.pdf", "_blank");
+});
+
+// Smooth scrolling for navbar links
 document.querySelectorAll('nav a[href^="#"]').forEach(link => {
-  link.addEventListener('click', function(e) {
+  link.addEventListener("click", function (e) {
     e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
+    const target = document.querySelector(this.getAttribute("href"));
     if (target) {
-      target.scrollIntoView({ behavior: 'smooth' });
+      target.scrollIntoView({ behavior: "smooth" });
     }
   });
 });
