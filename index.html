@@ -4,10 +4,29 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>John Moses Enje | Portfolio</title>
-  <meta name="description" content="John Moses Enje - ECE Graduate | IoT | Embedded Systems | ML & Data Science Portfolio" />
+
+  <!-- ✅ Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+  <!-- ✅ Styles -->
   <link rel="stylesheet" href="style.css" />
+
+  <!-- ✅ Scroll Animations -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <!-- ✅ Google Analytics (replace G-XXXXXXX with your own ID) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXX');
+  </script>
+
+  <!-- ✅ Scripts -->
   <script defer src="script.js"></script>
 </head>
+
 <body>
 
   <!-- ===== HERO SECTION ===== -->
@@ -40,13 +59,13 @@
   <main class="container">
 
     <!-- ===== ABOUT ===== -->
-    <section id="about">
+    <section id="about" data-aos="fade-up">
       <h2><span class="bar">|</span> About Me</h2>
       <p>I’m an Electronics and Communication Engineering graduate from Hyderabad with hands-on experience in embedded systems, IoT, VLSI, and data science. I build intelligent systems that bridge hardware and software to solve real-world problems.</p>
     </section>
 
     <!-- ===== SKILLS ===== -->
-    <section id="skills">
+    <section id="skills" data-aos="fade-up">
       <h2><span class="bar">|</span> Skills</h2>
       <div class="skills-badges">
         <span>Python</span><span>C</span><span>C++</span><span>Java</span><span>Embedded C</span>
@@ -56,73 +75,67 @@
     </section>
 
     <!-- ===== PROJECTS ===== -->
-    <section id="projects">
+    <section id="projects" data-aos="fade-up">
       <h2><span class="bar">|</span> Projects</h2>
       <div class="project-grid">
-
         <div class="project-card">
           <h3>Smart Waste Bin Monitoring</h3>
           <p>Arduino + GSM to track and alert on bin status.</p>
           <div class="tags"><span>Arduino</span><span>IoT</span><span>GSM</span></div>
           <a href="#" class="btn">View Project</a>
         </div>
-
         <div class="project-card">
           <h3>Spintronic Adder (Major Project)</h3>
-          <p>MTJ-based low-power adder for image processing.</p>
-          <div class="tags"><span>VLSI</span><span>Verilog</span><span>CMOS</span></div>
+          <p>MTJ-based low-power adder designed for image processing.</p>
+          <div class="tags"><span>VLSI</span><span>Verilog</span><span>MTJ</span></div>
           <a href="#" class="btn">View Major Project</a>
         </div>
-
         <div class="project-card">
           <h3>8051 Obstacle Detection</h3>
-          <p>Ultrasonic-based embedded proximity detection system.</p>
+          <p>Ultrasonic-based embedded proximity navigation system.</p>
           <div class="tags"><span>8051</span><span>Embedded C</span><span>Sensors</span></div>
           <a href="#" class="btn">GitHub</a>
         </div>
-
         <div class="project-card">
           <h3>Crop Price Forecasting</h3>
-          <p>ML-based prediction model for agricultural commodities.</p>
+          <p>ML model that predicts agricultural commodity price trends.</p>
           <div class="tags"><span>Python</span><span>ML</span><span>Time Series</span></div>
           <a href="#" class="btn">View Model</a>
         </div>
-
         <div class="project-card">
           <h3>AWS Hackathon Winner</h3>
-          <p>Serverless alerting system using AWS Lambda, S3, DynamoDB.</p>
+          <p>Serverless alerting app built with Lambda, S3, DynamoDB.</p>
           <div class="tags"><span>AWS</span><span>Lambda</span><span>DynamoDB</span></div>
           <a href="#" class="btn">View Demo</a>
         </div>
-
       </div>
     </section>
 
     <!-- ===== EXPERIENCE ===== -->
-    <section id="experience">
+    <section id="experience" data-aos="fade-up">
       <h2><span class="bar">|</span> Experience</h2>
       <div class="experience-list">
         <div class="exp-card">
           <h3>DevElet – Data Science Intern <span>Mar 2025 – Present</span></h3>
-          <p>Built ML models for disease and crop price forecasting during internship.</p>
+          <p>Developed ML models to forecast crop prices and vector-borne disease spread.</p>
         </div>
         <div class="exp-card">
           <h3>Deloitte (via ARC) – BMS Operator <span>Jan – Feb 2022</span></h3>
-          <p>Monitored HVAC, fire alarms, and building control systems.</p>
+          <p>Monitored real-time facility systems including HVAC, fire alarms, and energy usage.</p>
         </div>
         <div class="exp-card">
           <h3>Metro Cash & Carry – Associate <span>Nov 2018 – Dec 2021</span></h3>
-          <p>Managed online orders, inventory systems, and customer support.</p>
+          <p>Managed online retail logistics and earned the Customer Service Excellence Award (2020).</p>
         </div>
         <div class="exp-card">
           <h3>GRIP Engineers – Electrical Technician <span>Aug 2017 – Feb 2018</span></h3>
-          <p>Wired and tested crane automation systems and control panels.</p>
+          <p>Installed and tested automation controls for EOT cranes and handling equipment.</p>
         </div>
       </div>
     </section>
 
     <!-- ===== CONTACT ===== -->
-    <section id="contact">
+    <section id="contact" data-aos="fade-up">
       <h2><span class="bar">|</span> Contact</h2>
       <p><strong>Email:</strong> <a href="mailto:johnmosesenje0@gmail.com">johnmosesenje0@gmail.com</a></p>
       <p><strong>Phone:</strong> +91 7337468805</p>
@@ -143,6 +156,10 @@
       </div>
     </div>
   </footer>
+
+  <!-- ✅ AOS Init Script -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init({ duration: 1000 });</script>
 
 </body>
 </html>
