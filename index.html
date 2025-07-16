@@ -6,9 +6,10 @@
   <title>John Moses Enje | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <script defer src="script.js"></script>
 
-  <!-- Google tag (gtag.js) -->
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-8TX9Q7DEH0"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -39,14 +40,14 @@
   </header>
 
   <main>
-    <section id="about">
+    <section id="about" data-aos="fade-up">
       <h2>About Me</h2>
       <p>
         I’m an Electronics and Communication Engineering graduate from Hyderabad with hands-on experience in embedded systems, IoT, VLSI, and data science. I build intelligent systems that bridge hardware and software to solve real-world problems.
       </p>
     </section>
 
-    <section id="skills">
+    <section id="skills" data-aos="fade-up">
       <h2>Skills</h2>
       <div class="badge-container">
         <span class="badge">Python</span>
@@ -68,64 +69,35 @@
     </section>
 
     <section id="projects">
-      <h2>Projects</h2>
+      <h2 data-aos="fade-up">Projects</h2>
       <div class="card-grid">
-        <div class="card">
+        <div class="card" data-aos="zoom-in">
           <h3>Smart Waste Bin Monitoring</h3>
           <p>Arduino + GSM to track and alert on bin status.</p>
-          <div class="tags">
-            <span class="badge">Arduino</span>
-            <span class="badge">IoT</span>
-            <span class="badge">GSM</span>
-          </div>
         </div>
-
-        <div class="card">
+        <div class="card" data-aos="zoom-in">
           <h3>Spintronic Adder (Major Project)</h3>
           <p>MTJ-based low-power adder designed for image processing.</p>
-          <div class="tags">
-            <span class="badge">VLSI</span>
-            <span class="badge">Verilog</span>
-            <span class="badge">MTJ</span>
-          </div>
         </div>
-
-        <div class="card">
+        <div class="card" data-aos="zoom-in">
           <h3>8051 Obstacle Detection</h3>
           <p>Ultrasonic-based embedded proximity navigation system.</p>
-          <div class="tags">
-            <span class="badge">8051</span>
-            <span class="badge">Embedded C</span>
-            <span class="badge">Sensors</span>
-          </div>
         </div>
-
-        <div class="card">
+        <div class="card" data-aos="zoom-in">
           <h3>Crop Price Forecasting</h3>
           <p>ML model that predicts agricultural commodity price trends.</p>
-          <div class="tags">
-            <span class="badge">Python</span>
-            <span class="badge">ML</span>
-            <span class="badge">Time Series</span>
-          </div>
         </div>
-
-        <div class="card">
+        <div class="card" data-aos="zoom-in">
           <h3>AWS Hackathon Winner</h3>
           <p>Serverless alerting app built with Lambda, S3, DynamoDB.</p>
-          <div class="tags">
-            <span class="badge">AWS</span>
-            <span class="badge">Lambda</span>
-            <span class="badge">DynamoDB</span>
-          </div>
         </div>
       </div>
     </section>
 
     <section id="experience">
-      <h2>Experience</h2>
+      <h2 data-aos="fade-up">Experience</h2>
 
-      <div class="experience-card">
+      <div class="experience-card" data-aos="fade-right">
         <h3>DevElet – Data Science Intern</h3>
         <p><strong>March 2025 – Present</strong></p>
         <ul>
@@ -134,7 +106,7 @@
         </ul>
       </div>
 
-      <div class="experience-card">
+      <div class="experience-card" data-aos="fade-right">
         <h3>Deloitte (via ARC) – BMS Operator</h3>
         <p><strong>Jan – Feb 2022</strong></p>
         <ul>
@@ -143,7 +115,7 @@
         </ul>
       </div>
 
-      <div class="experience-card">
+      <div class="experience-card" data-aos="fade-right">
         <h3>Metro Cash & Carry – Associate (E-Commerce)</h3>
         <p><strong>Nov 2018 – Dec 2021</strong></p>
         <ul>
@@ -152,7 +124,7 @@
         </ul>
       </div>
 
-      <div class="experience-card">
+      <div class="experience-card" data-aos="fade-right">
         <h3>GRIP Engineers – Electrical Technician</h3>
         <p><strong>Aug 2017 – Feb 2018</strong></p>
         <ul>
@@ -162,7 +134,7 @@
       </div>
     </section>
 
-    <section id="contact">
+    <section id="contact" data-aos="fade-up">
       <h2>Contact</h2>
       <p>📧 <a href="mailto:johnmosesenje0@gmail.com">johnmosesenje0@gmail.com</a></p>
       <p>📱 <a href="tel:+917337468805">+91 7337468805</a></p>
@@ -173,5 +145,9 @@
   <footer>
     <p>© 2025 John Moses Enje | Portfolio</p>
   </footer>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
 </body>
 </html>
