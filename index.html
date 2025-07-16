@@ -6,12 +6,13 @@
   <title>John Moses Enje | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <script src="script.js" defer></script>
 
-  <!-- Google Analytics -->
+  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-8TX9Q7DEH0"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'G-8TX9Q7DEH0');
   </script>
@@ -22,89 +23,160 @@
     <div class="container">
       <h1>John Moses Enje</h1>
       <p>ECE Graduate | IoT & Embedded Systems | Data Engineering</p>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
-        <a href="John_Moses_Resume.pdf" download>Download Resume</a>
-      </nav>
+      <a class="button" href="John_Moses_Resume.pdf" download>Download Resume</a>
     </div>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><button id="toggle-mode">🌙</button></li>
+      </ul>
+    </nav>
   </header>
 
-  <section id="about">
-    <div class="container">
+  <main>
+    <section id="about">
       <h2>About Me</h2>
-      <p>I’m an Electronics and Communication Engineering graduate from Hyderabad with hands-on experience in embedded systems, IoT, VLSI, and data science. I build intelligent systems that bridge hardware and software to solve real-world problems.</p>
-    </div>
-  </section>
+      <p>
+        I’m an Electronics and Communication Engineering graduate from Hyderabad with hands-on experience in embedded systems, IoT, VLSI, and data science. I build intelligent systems that bridge hardware and software to solve real-world problems.
+      </p>
+    </section>
 
-  <section id="skills">
-    <div class="container">
+    <section id="skills">
       <h2>Skills</h2>
-      <ul>
-        <li><strong>Programming:</strong> Python, C, C++, Java</li>
-        <li><strong>Data Analytics:</strong> Machine Learning, Power BI</li>
-        <li><strong>Tools:</strong> Git, GitHub, Google Colab, Anaconda</li>
-        <li><strong>IoT & Embedded:</strong> Arduino, Raspberry Pi</li>
-        <li><strong>Soft Skills:</strong> Teamwork, Communication, Time Management</li>
-      </ul>
-    </div>
-  </section>
+      <div class="badge-container">
+        <span class="badge">Python</span>
+        <span class="badge">C</span>
+        <span class="badge">C++</span>
+        <span class="badge">Java</span>
+        <span class="badge">Embedded C</span>
+        <span class="badge">Verilog</span>
+        <span class="badge">Arduino</span>
+        <span class="badge">Raspberry Pi</span>
+        <span class="badge">MQTT</span>
+        <span class="badge">GSM</span>
+        <span class="badge">Scikit-learn</span>
+        <span class="badge">Pandas</span>
+        <span class="badge">NumPy</span>
+        <span class="badge">Power BI</span>
+        <span class="badge">AWS</span>
+      </div>
+    </section>
 
-  <section id="projects">
-    <div class="container">
+    <section id="projects">
       <h2>Projects</h2>
-      <div class="project">
-        <h3>Spintronic Adder for Image Processing</h3>
-        <p>Major project using spintronics for efficient image processing with reduced power consumption.</p>
-      </div>
-      <div class="project">
-        <h3>IoT-Based Waste Bin Monitoring</h3>
-        <p>Smart waste management using ultrasonic sensors and IoT.</p>
-      </div>
-      <div class="project">
-        <h3>Forecasting Crop Prices</h3>
-        <p>Data science project predicting prices using ML techniques.</p>
-      </div>
-      <div class="project">
-        <h3>AWS Hackathon – Winning Project</h3>
-        <p>Cloud-based healthcare data visualization with Power BI and AWS.</p>
-      </div>
-    </div>
-  </section>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Smart Waste Bin Monitoring</h3>
+          <p>Arduino + GSM to track and alert on bin status.</p>
+          <div class="tags">
+            <span class="badge">Arduino</span>
+            <span class="badge">IoT</span>
+            <span class="badge">GSM</span>
+          </div>
+          <a class="button" href="#">View Project</a>
+        </div>
 
-  <section id="experience">
-    <div class="container">
+        <div class="card">
+          <h3>Spintronic Adder (Major Project)</h3>
+          <p>MTJ-based low-power adder designed for image processing.</p>
+          <div class="tags">
+            <span class="badge">VLSI</span>
+            <span class="badge">Verilog</span>
+            <span class="badge">MTJ</span>
+          </div>
+          <a class="button" href="#">View Major Project</a>
+        </div>
+
+        <div class="card">
+          <h3>8051 Obstacle Detection</h3>
+          <p>Ultrasonic-based embedded proximity navigation system.</p>
+          <div class="tags">
+            <span class="badge">8051</span>
+            <span class="badge">Embedded C</span>
+            <span class="badge">Sensors</span>
+          </div>
+          <a class="button" href="#">GitHub</a>
+        </div>
+
+        <div class="card">
+          <h3>Crop Price Forecasting</h3>
+          <p>ML model that predicts agricultural commodity price trends.</p>
+          <div class="tags">
+            <span class="badge">Python</span>
+            <span class="badge">ML</span>
+            <span class="badge">Time Series</span>
+          </div>
+          <a class="button" href="#">View Model</a>
+        </div>
+
+        <div class="card">
+          <h3>AWS Hackathon Winner</h3>
+          <p>Serverless alerting app built with Lambda, S3, DynamoDB.</p>
+          <div class="tags">
+            <span class="badge">AWS</span>
+            <span class="badge">Lambda</span>
+            <span class="badge">DynamoDB</span>
+          </div>
+          <a class="button" href="#">View Demo</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
       <h2>Experience</h2>
-      <div class="job">
-        <h3>Associate – Online Orders & E-Commerce</h3>
-        <p><strong>METRO Cash and Carry</strong> (Nov 2018 – Dec 2021)</p>
+
+      <div class="experience-card">
+        <h3>DevElet – Data Science Intern</h3>
+        <p><strong>Mar 2025 – Present</strong></p>
         <ul>
-          <li>Processed online orders with high accuracy.</li>
-          <li>Managed logistics and customer support operations.</li>
+          <li>Developed machine learning models for agricultural and healthcare data.</li>
+          <li>Used Python (Pandas, Scikit-learn) for time-series forecasting.</li>
+          <li>Created interactive dashboards to visualize trends using Power BI.</li>
         </ul>
       </div>
-    </div>
-  </section>
 
-  <section id="contact">
-    <div class="container">
-      <h2>Contact Me</h2>
-      <p>Email: <a href="mailto:johnmosesenje0@gmail.com">johnmosesenje0@gmail.com</a></p>
-      <p>Phone: <a href="tel:+917337468805">+91 7337468805</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/john-moses-enje-791879218/" target="_blank">john-moses-enje</a></p>
-      <p>GitHub: <a href="https://github.com/johnmoses12" target="_blank">johnmoses12</a></p>
-    </div>
-  </section>
+      <div class="experience-card">
+        <h3>Deloitte (via ARC) – BMS Operator</h3>
+        <p><strong>Jan – Feb 2022</strong></p>
+        <ul>
+          <li>Monitored real-time HVAC, fire, and energy systems in smart buildings.</li>
+          <li>Assisted in facility automation troubleshooting and maintenance logging.</li>
+        </ul>
+      </div>
+
+      <div class="experience-card">
+        <h3>Metro Cash & Carry – Associate</h3>
+        <p><strong>Nov 2018 – Dec 2021</strong></p>
+        <ul>
+          <li>Managed online retail logistics during peak e-commerce operations.</li>
+          <li>Earned “Customer Service Excellence Award” (2020).</li>
+        </ul>
+      </div>
+
+      <div class="experience-card">
+        <h3>GRIP Engineers – Electrical Technician</h3>
+        <p><strong>Aug 2017 – Feb 2018</strong></p>
+        <ul>
+          <li>Installed and tested automation controls for cranes and heavy machinery.</li>
+          <li>Worked with VFDs, EOT cranes, and control panel diagnostics.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>📧 johnmosesenje0@gmail.com</p>
+      <p>📱 +91 7337468805</p>
+      <p>🌐 <a href="https://johnmoses12.github.io" target="_blank">johnmoses12.github.io</a></p>
+    </section>
+  </main>
 
   <footer>
-    <div class="container">
-      <p>© 2025 John Moses Enje. All rights reserved.</p>
-    </div>
+    <p>© 2025 John Moses Enje | Portfolio</p>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
