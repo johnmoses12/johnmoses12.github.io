@@ -1,22 +1,25 @@
-console.log("✅ Portfolio loaded");
+// Get DOM elements
+const toggleButton = document.getElementById('toggle-mode');
+const body = document.body;
 
-// Resume Download
-document.getElementById("download-resume").addEventListener("click", () => {
-  window.open("Resume_JohnMosesEnje.pdf", "_blank");
-});
+// Load theme from localStorage
+const savedTheme = localStorage.getItem('portfolio-theme');
+if (savedTheme === 'dark') {
+  body.classList.add('dark-mode');
+  toggleButton.textContent = '☀️';
+}
 
-// Smooth Scroll
-document.querySelectorAll('nav a[href^="#"]').forEach(link => {
-  link.addEventListener("click", e => {
-    e.preventDefault();
-    const target = document.querySelector(link.getAttribute("href"));
-    if (target) target.scrollIntoView({ behavior: "smooth" });
-  });
-});
+// Toggle theme on button click
+toggleButton.addEventListener('click', () => {
+  body.classList.toggle('dark-mode');
 
-// Dark Mode Toggle
-const toggleBtn = document.getElementById("toggle-theme");
-toggleBtn.addEventListener("click", () => {
-  document.body.classList.toggle("dark-mode");
-  toggleBtn.textContent = document.body.classList.contains("dark-mode") ? "☀️ Light Mode" : "🌙 Dark Mode";
+  // Update button icon
+  if (body.classList.contains('dark-mode')) {
+    toggleButton.textContent = '☀️';
+    localStorage.setItem('portfolio-theme', 'dark');
+  } else {
+    toggleButton.textContent = '🌙';
+    localStorage.setItem('portfolio-theme', 'light');
+  }
 });
+<script src="script.js"></script>
