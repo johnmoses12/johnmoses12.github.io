@@ -1,28 +1,28 @@
-// Toggle dark/light mode
+// 🌙 Dark/Light Mode Toggle
 document.getElementById('toggle-mode').addEventListener('click', function () {
   document.body.classList.toggle('dark-mode');
+
+  // Save mode in local storage
+  if (document.body.classList.contains('dark-mode')) {
+    localStorage.setItem('mode', 'dark');
+    this.textContent = '☀️';
+  } else {
+    localStorage.setItem('mode', 'light');
+    this.textContent = '🌙';
+  }
 });
 
-// Animate on scroll (if using AOS or custom)
-document.addEventListener("DOMContentLoaded", function () {
-  const elements = document.querySelectorAll('.project, .experience-item, .skill-badge');
+// 🧠 Keep user’s theme even after refresh
+window.onload = () => {
+  const mode = localStorage.getItem('mode');
+  if (mode === 'dark') {
+    document.body.classList.add('dark-mode');
+    document.getElementById('toggle-mode').textContent = '☀️';
+  }
+};
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = 1;
-        entry.target.style.transform = "translateY(0)";
-        observer.unobserve(entry.target);
-      }
-    });
-  }, {
-    threshold: 0.1
-  });
-
-  elements.forEach(el => {
-    el.style.opacity = 0;
-    el.style.transform = "translateY(20px)";
-    el.style.transition = "all 0.6s ease";
-    observer.observe(el);
-  });
+// ✅ AOS Library Init for scroll animation
+AOS.init({
+  duration: 800,
+  once: true
 });
