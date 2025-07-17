@@ -2,126 +2,116 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>John Moses Enje – Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="John Moses Enje Portfolio - IoT, Embedded Systems, Data Analytics, Python"/>
+  <meta property="og:image" content="thumbnail.png"/>
+  <link rel="icon" type="image/x-icon" href="favicon.ico"/>
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <title>John Moses Enje | Portfolio</title>
 </head>
 <body>
+  <button id="toggle-mode">🌙</button>
 
-  <!-- Header -->
   <header>
-    <div class="container">
-      <img src="profile.jpg" alt="John Moses Enje" class="profile-img" />
-      <h1>John Moses Enje</h1>
-      <p>ECE Graduate | IoT & Embedded Systems | Data Engineering</p>
-      <a href="Resume_JohnMosesEnje.pdf" class="btn" download>Download Resume</a>
-      <button id="toggle-mode">🌙</button>
-    </div>
+    <img src="profile.jpg" alt="John Moses Enje" class="profile-img"/>
+    <h1>John Moses Enje</h1>
+    <p>ECE Graduate | IoT & Embedded Systems | Data Analytics</p>
+    <a href="Resume_JohnMosesEnje.pdf" class="btn" download>📄 Download Resume</a>
   </header>
 
-  <!-- Navigation -->
   <nav>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
   </nav>
 
-  <!-- About -->
-  <section id="about" data-aos="fade-up">
-    <div class="container">
-      <h2>About Me</h2>
-      <p>
-        I’m an Electronics and Communication Engineering graduate from Hyderabad with hands-on experience in embedded systems, IoT, VLSI, and data science. I build intelligent systems that bridge hardware and software to solve real-world problems.
-      </p>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I’m an Electronics and Communication Engineering graduate from Hyderabad with hands-on experience in embedded systems, IoT, VLSI, and data science. I build intelligent systems that bridge hardware and software to solve real-world problems.
+    </p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skill-tags">
+      <span>Python</span>
+      <span>C/C++</span>
+      <span>Java</span>
+      <span>Embedded Systems</span>
+      <span>IoT</span>
+      <span>VLSI Design</span>
+      <span>Power BI</span>
+      <span>Git & GitHub</span>
+      <span>Data Analytics</span>
+      <span>Machine Learning</span>
+      <span>Communication</span>
+      <span>Time Management</span>
     </div>
   </section>
 
-  <!-- Skills -->
-  <section id="skills" data-aos="fade-up">
-    <div class="container">
-      <h2>Skills</h2>
-      <div class="skills-grid">
-        <div class="skill">C</div>
-        <div class="skill">C++</div>
-        <div class="skill">Python</div>
-        <div class="skill">Java</div>
-        <div class="skill">IoT</div>
-        <div class="skill">Embedded Systems</div>
-        <div class="skill">VLSI</div>
-        <div class="skill">Data Analysis</div>
-        <div class="skill">Machine Learning</div>
-        <div class="skill">Git & GitHub</div>
-      </div>
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project-card" data-aos="fade-up">
+      <h3>Smart Waste Bin Monitoring System</h3>
+      <p>IoT-based project using Arduino & GSM for real-time waste alerts and municipal automation.</p>
+    </div>
+    <div class="project-card" data-aos="fade-up">
+      <h3>Spintronic Adder (VLSI Major Project)</h3>
+      <p>Designed MTJ-based logic circuits for low-power image processing applications.</p>
+    </div>
+    <div class="project-card" data-aos="fade-up">
+      <h3>Vector-Borne Disease Forecasting</h3>
+      <p>Developed ML models during internship for disease trend prediction using real-time datasets.</p>
     </div>
   </section>
 
-  <!-- Projects -->
-  <section id="projects" data-aos="fade-up">
-    <div class="container">
-      <h2>Projects</h2>
-      <div class="project">
-        <h3>IoT-Based Waste Bin Monitoring System</h3>
-        <p>Smart garbage monitoring using NodeMCU and sensors.</p>
-      </div>
-      <div class="project">
-        <h3>Obstacle Finder Using 8051</h3>
-        <p>Ultrasonic-based obstacle detection using 8051 microcontroller.</p>
-      </div>
-      <div class="project">
-        <h3>Sprintronic Major Project</h3>
-        <p>College final-year project focused on real-time IoT-based automation.</p>
-      </div>
-      <div class="project">
-        <h3>AWS Hackathon Winner</h3>
-        <p>Developed a cloud-based solution during a national-level hackathon.</p>
-      </div>
+  <section id="experience">
+    <h2>Experience</h2>
+
+    <div class="exp-item" data-aos="fade-up">
+      <h3>Data Science Intern – DevElet</h3>
+      <p><strong>Feb 2025 – Jun 2025 · Remote</strong></p>
+      <p>Worked on real-time data analytics projects involving Python, ML models, and data visualization dashboards.</p>
+    </div>
+
+    <div class="exp-item" data-aos="fade-up">
+      <h3>BMS Operator – Deloitte (via ARC Property)</h3>
+      <p><strong>Jan 2022 – Feb 2022 · On-site</strong></p>
+      <p>Operated Building Management Systems (HVAC, Fire Alarms), supervised fault detection, monitored energy usage and coordinated maintenance operations.</p>
+    </div>
+
+    <div class="exp-item" data-aos="fade-up">
+      <h3>Associate – E-Commerce, METRO Cash & Carry</h3>
+      <p><strong>Nov 2018 – Dec 2021 · On-site</strong></p>
+      <p>Managed full-cycle order processing, warehouse logistics, inventory audits, and customer issue resolution. Awarded Customer Service Excellence (2020).</p>
+    </div>
+
+    <div class="exp-item" data-aos="fade-up">
+      <h3>Electrical Technician – GRIP Engineers Pvt. Ltd.</h3>
+      <p><strong>Aug 2017 – Feb 2018 · On-site</strong></p>
+      <p>Installed and maintained crane automation systems including control panels, motors, and hoisting mechanisms; conducted commissioning and calibration.</p>
     </div>
   </section>
 
-  <!-- Experience -->
-  <section id="experience" data-aos="fade-up">
-    <div class="container">
-      <h2>Experience</h2>
-      <div class="experience">
-        <h3>Devlet (Internship)</h3>
-        <p><strong>Feb 2025 – Jun 2025</strong></p>
-        <p>Worked on real-world machine learning and IoT analytics tasks including dashboards, automation pipelines, and embedded scripting using Python.</p>
-      </div>
-      <div class="experience">
-        <h3>METRO Cash and Carry – Associate</h3>
-        <p><strong>Nov 2018 – Dec 2021</strong></p>
-        <p>Managed online order logistics, improved order tracking workflows, and earned the Metro Customer Service Excellence Award (2020).</p>
-      </div>
-    </div>
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:johnmosesenje0@gmail.com">johnmosesenje0@gmail.com</a></p>
+    <p>Phone: <a href="tel:+917337468805">+91 7337468805</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/john-moses-enje-791879218" target="_blank">john-moses-enje</a></p>
+    <p>GitHub: <a href="https://github.com/johnmoses12" target="_blank">github.com/johnmoses12</a></p>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" data-aos="fade-up">
-    <div class="container">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:johnmosesenje0@gmail.com">johnmosesenje0@gmail.com</a></p>
-      <p>Phone: <a href="tel:+917337468805">+91 7337468805</a></p>
-      <p>GitHub: <a href="https://github.com/johnmoses12" target="_blank">johnmoses12</a></p>
-      <p>LinkedIn: <a href="https://linkedin.com/in/john-moses-enje-791879218" target="_blank">John Moses Enje</a></p>
-    </div>
-  </section>
-
-  <!-- Footer -->
   <footer>
-    <div class="container">
-      <p>© 2025 John Moses Enje. All rights reserved.</p>
-    </div>
+    <p>© 2025 John Moses Enje · Built with ❤️ | <a href="https://johnmoses12.github.io" target="_blank">Visit Live</a></p>
   </footer>
 
-  <script src="script.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>AOS.init();</script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="script.js"></script>
 </body>
 </html>
