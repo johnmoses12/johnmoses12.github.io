@@ -1,13 +1,16 @@
-// Dark Mode Toggle
-const toggleBtn = document.getElementById("toggle-mode");
-toggleBtn.addEventListener("click", () => {
-  document.body.classList.toggle("dark");
-  localStorage.setItem("theme", document.body.classList.contains("dark") ? "dark" : "light");
-});
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleButton = document.getElementById("toggle-mode");
+  const isDark = localStorage.getItem("dark-mode") === "true";
 
-// Load saved theme
-window.onload = () => {
-  if (localStorage.getItem("theme") === "dark") {
-    document.body.classList.add("dark");
+  if (isDark) {
+    document.body.classList.add("dark-mode");
+    toggleButton.textContent = "☀️";
   }
-};
+
+  toggleButton.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+    const darkEnabled = document.body.classList.contains("dark-mode");
+    localStorage.setItem("dark-mode", darkEnabled);
+    toggleButton.textContent = darkEnabled ? "☀️" : "🌙";
+  });
+});
