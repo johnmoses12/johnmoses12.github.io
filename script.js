@@ -1,16 +1,29 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const toggleButton = document.getElementById("toggle-mode");
-  const isDark = localStorage.getItem("dark-mode") === "true";
+// Toggle Dark Mode Button
+const toggleBtn = document.getElementById('toggle-mode');
+const body = document.body;
 
-  if (isDark) {
-    document.body.classList.add("dark-mode");
-    toggleButton.textContent = "☀️";
+toggleBtn.addEventListener('click', () => {
+  body.classList.toggle('dark');
+  const mode = body.classList.contains('dark') ? 'dark' : 'light';
+  localStorage.setItem('mode', mode);
+  toggleBtn.textContent = mode === 'dark' ? '☀️' : '🌙';
+});
+
+// Set initial mode from local storage
+window.addEventListener('DOMContentLoaded', () => {
+  const savedMode = localStorage.getItem('mode');
+  if (savedMode === 'dark') {
+    body.classList.add('dark');
+    toggleBtn.textContent = '☀️';
+  } else {
+    toggleBtn.textContent = '🌙';
   }
 
-  toggleButton.addEventListener("click", () => {
-    document.body.classList.toggle("dark-mode");
-    const darkEnabled = document.body.classList.contains("dark-mode");
-    localStorage.setItem("dark-mode", darkEnabled);
-    toggleButton.textContent = darkEnabled ? "☀️" : "🌙";
-  });
+  // Initialize AOS (Animate on Scroll)
+  if (typeof AOS !== 'undefined') {
+    AOS.init({
+      duration: 800,
+      offset: 100,
+    });
+  }
 });
