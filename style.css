@@ -1,4 +1,4 @@
-/* Smooth scrolling */
+/* === Smooth Scroll === */
 html {
   scroll-behavior: smooth;
 }
@@ -11,158 +11,127 @@ html {
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background-color: #ffffff;
-  color: #222;
-  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
   line-height: 1.6;
 }
 
-body.dark-mode {
-  background-color: #121212;
-  color: #eee;
-}
-
 header {
+  background: #209cee;
+  color: #fff;
+  padding: 20px;
   text-align: center;
-  padding: 3rem 1rem;
-  background-color: #209CEE;
-  color: white;
 }
 
-header .profile-img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  border: 3px solid white;
-  margin-bottom: 1rem;
-  object-fit: cover;
-}
-
-h1 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
-
-.btn {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.6rem 1.2rem;
-  background-color: white;
-  color: #209CEE;
-  border-radius: 5px;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.btn:hover {
-  background-color: #f0f0f0;
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
 }
 
 nav {
-  display: flex;
-  justify-content: center;
-  background-color: #333;
-  flex-wrap: wrap;
+  background: #333;
+  padding: 10px 0;
+  text-align: center;
 }
 
 nav a {
-  color: white;
-  padding: 1rem;
+  color: #fff;
   text-decoration: none;
+  padding: 10px 15px;
   font-weight: bold;
 }
 
 nav a:hover {
-  background-color: #444;
+  background: #209cee;
+  color: #fff;
 }
 
 section {
-  padding: 2rem;
-  max-width: 900px;
+  padding: 50px 20px;
+  max-width: 1000px;
   margin: auto;
 }
 
-h2 {
+section h2 {
+  color: #209cee;
+  margin-bottom: 20px;
   text-align: center;
-  margin-bottom: 1.5rem;
-  font-size: 1.8rem;
-  border-bottom: 2px solid #209CEE;
-  display: inline-block;
-  padding-bottom: 0.3rem;
-  color: #209CEE;
 }
 
-body.dark-mode h2 {
-  color: #82d2ff;
-}
-
-.skill-tags {
+.skills {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 10px;
 }
 
-.skill-tags span {
-  background-color: #209CEE;
+.skill-badge {
+  background-color: #209cee;
   color: white;
-  padding: 0.5rem 1rem;
+  padding: 8px 15px;
   border-radius: 20px;
   font-size: 0.9rem;
 }
 
-body.dark-mode .skill-tags span {
-  background-color: #444;
-}
-
-.project-card,
-.exp-item {
-  background-color: #f9f9f9;
-  margin-bottom: 1.5rem;
-  padding: 1rem;
-  border-left: 5px solid #209CEE;
-  border-radius: 5px;
-}
-
-body.dark-mode .project-card,
-body.dark-mode .exp-item {
-  background-color: #1e1e1e;
-  border-left: 5px solid #82d2ff;
-}
-
-.project-card h3,
-.exp-item h3 {
-  margin-bottom: 0.5rem;
-  color: #209CEE;
-}
-
-body.dark-mode .project-card h3,
-body.dark-mode .exp-item h3 {
-  color: #82d2ff;
+.project, .experience-item {
+  background: white;
+  border-left: 5px solid #209cee;
+  margin-bottom: 20px;
+  padding: 15px 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 footer {
+  background: #333;
+  color: #fff;
   text-align: center;
-  background-color: #209CEE;
-  color: white;
-  padding: 1rem;
-  margin-top: 2rem;
+  padding: 20px;
 }
 
+/* Dark/Light Mode Toggle Button */
 #toggle-mode {
   position: fixed;
-  top: 1rem;
-  right: 1rem;
-  z-index: 999;
-  padding: 0.4rem 0.6rem;
-  background-color: #209CEE;
+  top: 20px;
+  right: 20px;
+  background: #209cee;
   color: white;
   border: none;
-  border-radius: 20px;
+  padding: 10px;
+  border-radius: 50%;
   cursor: pointer;
+  font-size: 1.2rem;
+  z-index: 1000;
 }
 
-#toggle-mode:hover {
-  background-color: #107abb;
+/* === Dark Mode Styles === */
+body.dark-mode {
+  background-color: #1e1e1e;
+  color: #f4f4f4;
+}
+
+body.dark-mode header,
+body.dark-mode nav,
+body.dark-mode footer {
+  background-color: #111;
+}
+
+body.dark-mode nav a {
+  color: #ddd;
+}
+
+body.dark-mode nav a:hover {
+  background: #444;
+  color: #fff;
+}
+
+body.dark-mode .skill-badge {
+  background-color: #444;
+}
+
+body.dark-mode .project,
+body.dark-mode .experience-item {
+  background-color: #2a2a2a;
+  color: #fff;
+  border-left-color: #4fc3f7;
 }
