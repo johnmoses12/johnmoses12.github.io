@@ -3,150 +3,124 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>John Moses Enje | Portfolio</title>
+  <title>John Moses Enje – Portfolio</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  <script defer src="script.js"></script>
-
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8TX9Q7DEH0"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-8TX9Q7DEH0');
-  </script>
 </head>
-
 <body>
+
+  <!-- Header -->
   <header>
     <div class="container">
       <img src="profile.jpg" alt="John Moses Enje" class="profile-img" />
       <h1>John Moses Enje</h1>
       <p>ECE Graduate | IoT & Embedded Systems | Data Engineering</p>
-      <a class="button" href="Resume_JohnMosesEnje.pdf" download>Download Resume</a>
+      <a href="Resume_JohnMosesEnje.pdf" class="btn" download>Download Resume</a>
       <button id="toggle-mode">🌙</button>
     </div>
-    <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
   </header>
 
-  <main>
-    <section id="about" data-aos="fade-up">
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- About -->
+  <section id="about" data-aos="fade-up">
+    <div class="container">
       <h2>About Me</h2>
       <p>
         I’m an Electronics and Communication Engineering graduate from Hyderabad with hands-on experience in embedded systems, IoT, VLSI, and data science. I build intelligent systems that bridge hardware and software to solve real-world problems.
       </p>
-    </section>
+    </div>
+  </section>
 
-    <section id="skills" data-aos="fade-up">
+  <!-- Skills -->
+  <section id="skills" data-aos="fade-up">
+    <div class="container">
       <h2>Skills</h2>
-      <div class="badge-container">
-        <span class="badge">Python</span>
-        <span class="badge">C</span>
-        <span class="badge">C++</span>
-        <span class="badge">Java</span>
-        <span class="badge">Embedded C</span>
-        <span class="badge">Verilog</span>
-        <span class="badge">Arduino</span>
-        <span class="badge">Raspberry Pi</span>
-        <span class="badge">MQTT</span>
-        <span class="badge">GSM</span>
-        <span class="badge">Scikit-learn</span>
-        <span class="badge">Pandas</span>
-        <span class="badge">NumPy</span>
-        <span class="badge">Power BI</span>
-        <span class="badge">AWS</span>
+      <div class="skills-grid">
+        <div class="skill">C</div>
+        <div class="skill">C++</div>
+        <div class="skill">Python</div>
+        <div class="skill">Java</div>
+        <div class="skill">IoT</div>
+        <div class="skill">Embedded Systems</div>
+        <div class="skill">VLSI</div>
+        <div class="skill">Data Analysis</div>
+        <div class="skill">Machine Learning</div>
+        <div class="skill">Git & GitHub</div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="projects">
-      <h2 data-aos="fade-up">Projects</h2>
-      <div class="card-grid">
-        <div class="card" data-aos="zoom-in">
-          <h3>Smart Waste Bin Monitoring</h3>
-          <p>Arduino + GSM to track and alert on bin status.</p>
-        </div>
-        <div class="card" data-aos="zoom-in">
-          <h3>Spintronic Adder (Major Project)</h3>
-          <p>MTJ-based low-power adder designed for image processing.</p>
-        </div>
-        <div class="card" data-aos="zoom-in">
-          <h3>8051 Obstacle Detection</h3>
-          <p>Ultrasonic-based embedded proximity navigation system.</p>
-        </div>
-        <div class="card" data-aos="zoom-in">
-          <h3>Crop Price Forecasting</h3>
-          <p>ML model that predicts agricultural commodity price trends.</p>
-        </div>
-        <div class="card" data-aos="zoom-in">
-          <h3>AWS Hackathon Winner</h3>
-          <p>Serverless alerting app built with Lambda, S3, DynamoDB.</p>
-        </div>
+  <!-- Projects -->
+  <section id="projects" data-aos="fade-up">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="project">
+        <h3>IoT-Based Waste Bin Monitoring System</h3>
+        <p>Smart garbage monitoring using NodeMCU and sensors.</p>
       </div>
-    </section>
-
-    <section id="experience">
-      <h2 data-aos="fade-up">Experience</h2>
-
-      <div class="experience-card" data-aos="fade-right">
-        <h3>DevElet – Data Science Intern</h3>
-        <p><strong>March 2025 – Present</strong></p>
-        <ul>
-          <li>Developed machine learning models for crop price forecasting and disease prediction.</li>
-          <li>Used Python (Pandas, Scikit-learn) and Power BI to visualize data.</li>
-        </ul>
+      <div class="project">
+        <h3>Obstacle Finder Using 8051</h3>
+        <p>Ultrasonic-based obstacle detection using 8051 microcontroller.</p>
       </div>
-
-      <div class="experience-card" data-aos="fade-right">
-        <h3>Deloitte (via ARC) – BMS Operator</h3>
-        <p><strong>Jan – Feb 2022</strong></p>
-        <ul>
-          <li>Monitored HVAC, fire, and lighting systems through BMS software.</li>
-          <li>Performed real-time fault detection, logging, and system optimization.</li>
-        </ul>
+      <div class="project">
+        <h3>Sprintronic Major Project</h3>
+        <p>College final-year project focused on real-time IoT-based automation.</p>
       </div>
+      <div class="project">
+        <h3>AWS Hackathon Winner</h3>
+        <p>Developed a cloud-based solution during a national-level hackathon.</p>
+      </div>
+    </div>
+  </section>
 
-      <div class="experience-card" data-aos="fade-right">
-        <h3>Metro Cash & Carry – Associate (E-Commerce)</h3>
+  <!-- Experience -->
+  <section id="experience" data-aos="fade-up">
+    <div class="container">
+      <h2>Experience</h2>
+      <div class="experience">
+        <h3>Devlet (Internship)</h3>
+        <p><strong>Feb 2025 – Jun 2025</strong></p>
+        <p>Worked on real-world machine learning and IoT analytics tasks including dashboards, automation pipelines, and embedded scripting using Python.</p>
+      </div>
+      <div class="experience">
+        <h3>METRO Cash and Carry – Associate</h3>
         <p><strong>Nov 2018 – Dec 2021</strong></p>
-        <ul>
-          <li>Handled online order processing, customer service, and stock management.</li>
-          <li>Earned “Customer Service Excellence Award” in 2020.</li>
-        </ul>
+        <p>Managed online order logistics, improved order tracking workflows, and earned the Metro Customer Service Excellence Award (2020).</p>
       </div>
+    </div>
+  </section>
 
-      <div class="experience-card" data-aos="fade-right">
-        <h3>GRIP Engineers – Electrical Technician</h3>
-        <p><strong>Aug 2017 – Feb 2018</strong></p>
-        <ul>
-          <li>Installed and tested electrical control panels and hoisting systems.</li>
-          <li>Assisted in wiring and automation of EOT cranes.</li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="contact" data-aos="fade-up">
+  <!-- Contact -->
+  <section id="contact" data-aos="fade-up">
+    <div class="container">
       <h2>Contact</h2>
-      <p>📧 <a href="mailto:johnmosesenje0@gmail.com">johnmosesenje0@gmail.com</a></p>
-      <p>📱 <a href="tel:+917337468805">+91 7337468805</a></p>
-      <p>🌐 <a href="https://johnmoses12.github.io" target="_blank">johnmoses12.github.io</a></p>
-    </section>
-  </main>
+      <p>Email: <a href="mailto:johnmosesenje0@gmail.com">johnmosesenje0@gmail.com</a></p>
+      <p>Phone: <a href="tel:+917337468805">+91 7337468805</a></p>
+      <p>GitHub: <a href="https://github.com/johnmoses12" target="_blank">johnmoses12</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/john-moses-enje-791879218" target="_blank">John Moses Enje</a></p>
+    </div>
+  </section>
 
+  <!-- Footer -->
   <footer>
-    <p>© 2025 John Moses Enje | Portfolio</p>
+    <div class="container">
+      <p>© 2025 John Moses Enje. All rights reserved.</p>
+    </div>
   </footer>
 
-  <!-- AOS JS -->
+  <script src="script.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>AOS.init();</script>
 </body>
