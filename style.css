@@ -3,149 +3,224 @@ html {
   scroll-behavior: smooth;
 }
 
+/* === Base Reset === */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s, color 0.3s;
 }
 
+/* === Body & Themes === */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   line-height: 1.6;
-  background-color: #fff;
+  background-color: #ffffff;
   color: #333;
-  padding: 20px;
+  padding-bottom: 50px;
 }
 
+/* === Dark Mode === */
 body.dark-mode {
-  background-color: #121212;
-  color: #e0e0e0;
+  background-color: #111;
+  color: #f0f0f0;
 }
 
+body.dark-mode header,
+body.dark-mode footer {
+  background-color: #1a1a1a;
+}
+
+body.dark-mode a {
+  color: #66ccff;
+}
+
+body.dark-mode .card,
+body.dark-mode .experience-card {
+  background-color: #222;
+  border-color: #444;
+}
+
+body.dark-mode .badge {
+  background-color: #444;
+  color: #fff;
+}
+
+/* === Header === */
 header {
+  background-color: #209cee;
+  color: #fff;
+  padding: 2rem 1rem;
   text-align: center;
-  margin-bottom: 2rem;
 }
 
-header .profile-img {
+.profile-img {
   width: 120px;
+  height: 120px;
   border-radius: 50%;
+  border: 3px solid #fff;
   margin-bottom: 1rem;
-  border: 3px solid #555;
+  object-fit: cover;
 }
 
 header h1 {
-  font-size: 2rem;
+  margin-bottom: 0.5rem;
 }
 
 header p {
   font-size: 1rem;
-  color: #777;
-}
-
-header nav {
-  margin-top: 1rem;
-}
-
-header nav a {
-  margin: 0 12px;
-  text-decoration: none;
-  color: #0066cc;
-  font-weight: bold;
-}
-
-header nav a:hover {
-  text-decoration: underline;
-}
-
-section {
-  margin: 2rem 0;
-}
-
-h2 {
-  font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 
-.tag-container,
-.tags {
+.button {
+  background: #fff;
+  color: #209cee;
+  padding: 0.6rem 1.2rem;
+  text-decoration: none;
+  border-radius: 4px;
+  margin: 0.5rem;
+  display: inline-block;
+}
+
+#toggle-mode {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 0.4rem 0.7rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+/* === Navigation === */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
-  gap: 8px;
-}
-
-.tag-container span,
-.tags span,
-.badge {
-  background-color: #f0f0f0;
-  padding: 6px 12px;
-  border-radius: 20px;
-  font-size: 0.9rem;
-}
-
-body.dark-mode .badge,
-body.dark-mode .tag-container span,
-body.dark-mode .tags span {
-  background-color: #1e1e1e;
-  color: #eee;
-  border: 1px solid #444;
-}
-
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1rem;
 }
 
-.card {
-  background-color: #fafafa;
-  border: 1px solid #ddd;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-body.dark-mode .card {
-  background-color: #1e1e1e;
-  border-color: #333;
-}
-
-.card h3 {
-  margin-top: 0;
-}
-
-.card ul {
-  padding-left: 20px;
-}
-
-.card li {
-  margin-bottom: 6px;
-}
-
-footer {
-  text-align: center;
-  margin-top: 3rem;
-  font-size: 0.9rem;
-  color: #888;
-}
-
-a {
-  color: #007acc;
+nav ul li a {
+  color: #fff;
   text-decoration: none;
+  font-weight: bold;
 }
 
-a:hover {
+nav ul li a:hover {
   text-decoration: underline;
 }
 
-/* Toggle Button */
-#toggle-mode {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background: transparent;
-  border: none;
+/* === Main Sections === */
+main {
+  padding: 2rem 1rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  border-bottom: 2px solid #209cee;
+  display: inline-block;
+  padding-bottom: 0.25rem;
+}
+
+/* === Skills Badges === */
+.badge-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.badge {
+  background: #209cee;
+  color: #fff;
+  padding: 0.4rem 0.9rem;
+  border-radius: 20px;
+  font-size: 0.95rem;
+}
+
+/* === Card Sections === */
+.card-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  margin-top: 1rem;
+}
+
+.card,
+.experience-card {
+  background: #f9f9f9;
+  padding: 1rem 1.2rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.card h3 {
+  margin-bottom: 0.5rem;
   font-size: 1.2rem;
-  cursor: pointer;
+  color: #209cee;
+}
+
+.card p,
+.experience-card p,
+.experience-card li {
+  font-size: 0.95rem;
+}
+
+.experience-card ul {
+  padding-left: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+/* === Contact Section === */
+section#contact p {
+  text-align: center;
+  font-size: 1rem;
+}
+
+section#contact a {
+  color: #209cee;
+  text-decoration: none;
+}
+
+section#contact a:hover {
+  text-decoration: underline;
+}
+
+/* === Footer === */
+footer {
+  background: #209cee;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+/* === Media Queries === */
+@media screen and (max-width: 600px) {
+  .profile-img {
+    width: 90px;
+    height: 90px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .button {
+    padding: 0.4rem 1rem;
+  }
 }
